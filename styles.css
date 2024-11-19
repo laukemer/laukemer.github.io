@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    overflow: hidden; 
+  }
+  
+  .scene {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #87CEEB; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .car {
+    position: absolute;
+    bottom: 10px;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    animation: drive 4s linear infinite;
+  }
+  
+  .body {
+    width: 150px;
+    height: 40px;
+    background-color: #FF5733; 
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+  }
+  
+  .wheel {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    border-radius: 50%;
+    bottom: -10px;
+  }
+  
+  .front {
+    left: 120px;
+  }
+  
+  .rear {
+    left: 20px;
+  }
+  
+  @keyframes drive {
+    0% {
+      left: -200px; 
+    }
+    100% {
+      left: calc(100% - 250px); 
+    }
+  }
+  
